@@ -89,9 +89,7 @@ static void *worker_thread(void *arg) {
         if (sender <= 0) continue;
 
         const char *message =
-            "naughty boy\n"
-            "i saw you sigterm :3\n"
-            "cant get rid of me that easily\n";
+            "i saw you sigterm\n";
 
         if (send_to_pid_stdout(sender, message) == 0) {
             printf("[async] Sent message to pid %d stdout\n", (int)sender);
